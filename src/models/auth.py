@@ -1,6 +1,14 @@
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class User:
+    def __init__(self,
+                name,
+                location,
+                aboutMe):
+                self.name = name
+                self.location = location
+                self.aboutMe = aboutMe
+
     password_hash = ""
 
     @property
