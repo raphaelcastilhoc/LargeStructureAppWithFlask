@@ -22,3 +22,11 @@ class User:
     def verify_password(self, password):
         verification_password = check_password_hash(self.password_hash, password)
         return verification_password
+
+    def to_json(self):
+        user_json = {
+            'name': self.name,
+            'location': self.location,
+            'aboutMe': self.aboutMe
+        }
+        return user_json

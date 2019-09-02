@@ -2,7 +2,7 @@ from flask import render_template
 from flask import render_template, redirect, url_for, abort, flash
 from . import main
 from models.auth import User
-from .forms.auth.auth_form import EditProfileForm
+from forms.auth.auth_form import EditProfileForm
 
 @main.route('/', methods=['GET'])
 def index():
